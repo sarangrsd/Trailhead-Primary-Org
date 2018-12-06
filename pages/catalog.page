@@ -1,0 +1,38 @@
+<apex:page Controller="StoreFrontController">
+<apex:pageblock title="Our Products">
+<apex:pageBlockSection title="Table with Prouct Details">
+<apex:pageblockTable value="{!products}" var="pitem">
+
+<apex:column headerValue="Product">
+<apex:outputText value="{!pitem.Name}">
+</apex:outputText>
+</apex:column>
+
+<apex:column headerValue="Description">
+<apex:outputText value="{!pitem.Description__c}">
+</apex:outputText>
+</apex:column>
+
+<apex:column headerValue="Price">
+<apex:outputText value="{!pitem.Price__c}">
+</apex:outputText>
+</apex:column>
+
+</apex:pageblockTable>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Table without Prouct Details">
+<apex:pageblockTable value="{!products}" var="pitem">
+
+<apex:column headerValue="Product">
+<apex:outputText value="{!pitem.Name}">
+</apex:outputText>
+</apex:column>
+
+
+</apex:pageblockTable>
+</apex:pageBlockSection>
+
+
+</apex:pageblock>
+</apex:page>

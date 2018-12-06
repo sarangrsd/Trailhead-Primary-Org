@@ -1,0 +1,26 @@
+<apex:page standardController="Positions__c" extensions="BasicVFPageExtension">
+    <apex:form >
+        <apex:pageBlock title="Edit Positions" >
+            <apex:pageMessages id="myPGMSG"/>
+            
+            <!--<apex:pageBlockSection >
+                <apex:pageBlockTable value="{!Positions}" var="pos">
+                    <apex:column  value="{!pos.Name}" />
+                    <apex:column value="{!pos.Functional_Area__c}" />
+                </apex:pageBlockTable> >
+            </apex:pageBlockSection>-->
+            
+            <apex:pageBlockSection > 
+                <apex:inputField value="{!Positions__c.Name}"/>
+                <apex:inputField value="{!Positions__c.Functional_Area__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection > 
+                <apex:inputFile title="My Input File" value="{document.body}"/>
+            </apex:pageBlockSection>
+           
+                <apex:commandButton action="{!save}" value="save" rerender="myPGMSG"/>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

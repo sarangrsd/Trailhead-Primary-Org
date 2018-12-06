@@ -1,0 +1,18 @@
+<apex:page sidebar="false" standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="Account input">
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="save"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Account.name}"/>
+                <apex:inputField value="{!Account.phone}"/>
+                <apex:inputField value="{!Account.Industry}"/>
+                <apex:inputField value="{!Account.AnnualRevenue}"/>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
